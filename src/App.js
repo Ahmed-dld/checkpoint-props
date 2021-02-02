@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import React  from 'react';
+import Profil from './Profil'
+import ChildComponent from './ChildComponent'
+const App = () => {
+ const handleAlert = (name) => {
+     alert(`Hi, I am  ${name}` )
+ }   
+        return (
+            <div className="App">
+
+           <Profil
+            //FullName='Ahmed daldoul' 
+            Bio= 'Ingénieur civil développement web , région de Monastir, Tunisie' 
+            Func= 'Ingénier Civil'   
+            handleAlert={handleAlert} 
+            />
+       <ChildComponent
+       IMG= 'Photo Profil'
+       />
+
+         </div>
+        )
+    }
 
 export default App;
