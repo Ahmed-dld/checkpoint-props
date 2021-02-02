@@ -16,7 +16,7 @@ const App = () => {
             handleAlert={handleAlert} 
             />
        <ChildComponent
-       IMG= 'Photo Profil'
+       IMG= ''
        />
 
          </div>
